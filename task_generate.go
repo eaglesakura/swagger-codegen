@@ -24,7 +24,7 @@ func newSwaggerCodegenTask(ctx *cli.Context) (*SwaggerCodegenTask, error) {
 		ctx: ctx,
 	}
 
-	if version := ctx.String("version"); version == "" {
+	if version := ctx.String("codegen-version"); version == "" {
 		// デフォルトバージョンを使用する
 		task.SwaggerCodegenVersion = SWAGGER_CODEGEN_VERSION
 	} else {
@@ -56,6 +56,7 @@ func newSwaggerCodegenTask(ctx *cli.Context) (*SwaggerCodegenTask, error) {
 		task.TargetLanguage = target
 	}
 
+	fmt.Printf("lightweight-swagger-codegen version[%v]\n", task.SwaggerCodegenVersion)
 	return task, nil
 }
 

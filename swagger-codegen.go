@@ -19,7 +19,23 @@ func main() {
 	app.Usage = "swagger code generator"
 	app.Version = "0.0 / lightweight-swagger-codegen " + SWAGGER_CODEGEN_VERSION // lightweight-swagger-codegenバージョンに合わせる
 
+	app.Flags = []cli.Flag{
+		cli.StringFlag{
+			Name:  "codegen-version",
+			Usage: "lightweight-swagger-codegen version, default = " + SWAGGER_CODEGEN_VERSION,
+		},
+	}
 	app.Commands = []cli.Command{
+		{
+			Name: "init",
+			Action: func(ctx *cli.Context) {
+				if task, err := newInitTask(ctx); err != nil {
+					fmt.Errorf("%v\n", err)
+				} else {
+					task.Execute()
+				}
+			},
+		},
 		{
 			Name: "generate",
 			Action: func(ctx *cli.Context) {
@@ -28,7 +44,6 @@ func main() {
 				} else {
 					task.Execute()
 				}
-
 			},
 			Flags: []cli.Flag{
 				cli.StringFlag{
