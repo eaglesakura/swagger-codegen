@@ -28,10 +28,14 @@ func newInitTask(ctx *cli.Context) (*InitTask, error) {
 }
 
 func (it *InitTask) Execute() {
+
+	dockerImageName := "eaglesakura/swagger-codegen:" + it.SwaggerCodegenVersion
+	fmt.Printf("docker image[%v]\n", dockerImageName)
+
 	shell := &Shell{
 		Commands: []string{
 			"docker", "pull",
-			"eaglesakura/swagger-codegen:" + it.SwaggerCodegenVersion,
+			dockerImageName,
 		},
 	}
 
