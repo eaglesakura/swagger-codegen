@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-const SWAGGER_CODEGEN_VERSION = "1.1.build-56"
+const SwaggerCodegenVersion = "1.1.0"
 
 func main() {
 	NewTempFileDirectory()
@@ -17,12 +17,12 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "lightweight-swagger-codegen"
 	app.Usage = "swagger code generator"
-	app.Version = "0.0 / lightweight-swagger-codegen " + SWAGGER_CODEGEN_VERSION // lightweight-swagger-codegenバージョンに合わせる
+	app.Version = "1.0.0 / lightweight-swagger-codegen " + SwaggerCodegenVersion // lightweight-swagger-codegenバージョンに合わせる
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "codegen-version",
-			Usage: "lightweight-swagger-codegen version, default = " + SWAGGER_CODEGEN_VERSION,
+			Usage: "lightweight-swagger-codegen version, default = " + SwaggerCodegenVersion,
 		},
 	}
 	app.Commands = []cli.Command{

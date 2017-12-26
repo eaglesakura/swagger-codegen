@@ -17,7 +17,7 @@ func newInitTask(ctx *cli.Context) (*InitTask, error) {
 
 	if version := ctx.String("codegen-version"); version == "" {
 		// デフォルトバージョンを使用する
-		task.SwaggerCodegenVersion = SWAGGER_CODEGEN_VERSION
+		task.SwaggerCodegenVersion = SwaggerCodegenVersion
 	} else {
 		// 指定バージョンを使用する
 		task.SwaggerCodegenVersion = version
