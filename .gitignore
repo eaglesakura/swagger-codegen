@@ -27,3 +27,4 @@ deploy/deploy.yaml
 /.xpipeline
 /.swagger
 /test.sh
+/docker/generate.groovy
