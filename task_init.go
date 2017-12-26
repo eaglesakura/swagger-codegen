@@ -53,4 +53,5 @@ func (it *InitTask) Execute() {
 		return
 	}
 
+	fmt.Printf("swagger-codegen [%v] initialized\n", it.SwaggerCodegenVersion)
 }
