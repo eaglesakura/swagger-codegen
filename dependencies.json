@@ -1,0 +1,9 @@
+{
+  "Repositories": [
+    {
+      "ImportPath": "github.com/urfave/cli",
+      "Rev": "39908eb08fee7c10d842622a114a5c133fb0a3c6",
+      "Lang": "golang"
+    }
+  ]
+}
