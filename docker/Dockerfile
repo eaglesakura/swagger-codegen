@@ -10,7 +10,7 @@ ENV _JAVA_OPTIONS="-Dfile.encoding=UTF-8" \
 
 RUN  dpkg --add-architecture i386 \
   && apt-get update \
-  && apt-get install -y openjdk-8-jdk wget unzip \
+  && apt-get install -y wget unzip eclipse \
   && mkdir $HOME/tools \
   && cd $HOME/tools \
   && wget https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.9.zip -O groovy.zip \
@@ -30,4 +30,5 @@ RUN  echo '@GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/ea
   && groovy /root/sync.groovy \
   && rm /root/sync.groovy
 
+ADD eclipse.prefs /root
 ADD generate.groovy /usr/local/bin
