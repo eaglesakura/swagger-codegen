@@ -39,13 +39,7 @@ static main(String[] args) {
                 "-c", "config.json",
         ] as String[])
 
-        println([
-            "eclipse",
-            "-nosplash",
-            "-application", "org.eclipse.jdt.core.JavaCodeFormatter",
-            "-config", "/root/eclipse.prefs",
-            "-verbose", "`find . -name '*.java'`"
-            ].execute().text)
+        println(["/root/java-formatter.sh"].execute().text)
     } else if(args[0] == "swagger-json") {
         // generate swagger.json
         com.eaglesakura.swagger.generator.Generator.main([

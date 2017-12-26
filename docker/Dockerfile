@@ -30,5 +30,8 @@ RUN  echo '@GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/ea
   && groovy /root/sync.groovy \
   && rm /root/sync.groovy
 
+# add scripts
 ADD eclipse.prefs /root
+ADD java-formatter.sh /root
 ADD generate.groovy /usr/local/bin
+RUN chmod +x /root/java-formatter.sh
