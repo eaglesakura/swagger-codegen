@@ -7,42 +7,45 @@ import (
 )
 
 type Shell struct {
-	/**
-	 * カレントディレクトリ
-	 */
+	/*
+	カレントディレクトリ
+	*/
 	Chdir string
 
-	/**
-	 * 実行コマンド
-	 */
+	/*
+	実行コマンド
+	*/
 	Commands []string
 
-	/**
-	 * 標準出力のハンドラ
-	 */
-	Stdout func(stdout string)
+	/*
+	標準出力のハンドラ
+	*/
+	Stdout func(lineText string)
 
-	/**
-	 * 標準エラーのハンドラ
-	 */
-	Stderr func(stdout string)
+	/*
+	標準エラーのハンドラ
+	*/
+	Stderr func(lineText string)
 }
 
 /*
- 実行し、標準入力とエラーを取得する
+実行し、標準入力とエラーを取得する
 */
 func (it *Shell) RunStdout() (stdout string, stderr string, err error) {
-	it.Stdout = func(_stdout string) {
-		stdout = _stdout
+	it.Stdout = func(lineText string) {
+		stdout = lineText
 	}
-	it.Stderr = func(_stdout string) {
-		stderr = _stdout
+	it.Stderr = func(lineText string) {
+		stderr = lineText
 	}
 
 	err = it.Run()
 	return stdout, stderr, err
 }
 
+/*
+コマンドを実行する
+*/
 func (it *Shell) Run() error {
 	cmd := exec.Command(it.Commands[0], it.Commands[1:]...)
 
