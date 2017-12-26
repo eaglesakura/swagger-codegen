@@ -17,7 +17,7 @@ static main(String[] args) {
                 "-c", "config.json",
         ] as String[])
 
-        println(["go", "fmt", "/output/..."].execute().text)
+        println(["go", "fmt", "../output/..."].execute().text)
     } else if(args[0] == "go-server") {
         // generate go server
         com.eaglesakura.swagger.generator.Generator.main([
@@ -28,7 +28,7 @@ static main(String[] args) {
                 "-c", "config.json",
         ] as String[])
 
-        println(["go", "fmt", "/output/..."].execute().text)
+        println(["go", "fmt", "../output/..."].execute().text)
     } else if(args[0] == "android") {
         // Generate Android client binding
         com.eaglesakura.swagger.generator.Generator.main([
