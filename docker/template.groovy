@@ -2,7 +2,7 @@
 // groovy ./script/swagger-codegen.groovy
 
 @GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/eaglesakura/maven/")
-@Grab("com.eaglesakura:lightweight-swagger-codegen:1.1.build-55")
+@Grab("com.eaglesakura:lightweight-swagger-codegen:__CODEGEN_VERSION__")
 import java.lang.Object;
 
 static main(String[] args) {
