@@ -1,7 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER @eaglesakura
 
-ENV SWAGGER_CODEGEN_VERSION=1.0.52
 ENV _JAVA_OPTIONS="-Dfile.encoding=UTF-8" \
     JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
     PATH="/root/tools/groovy-2.4.9/bin:/root/tools/go/bin:/root/tools/gopath/bin:$PATH" \
@@ -21,6 +20,7 @@ RUN  dpkg --add-architecture i386 \
   && wget https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz -O $HOME/golang.temp.tar.gz \
   && tar xovfz "$HOME/golang.temp.tar.gz" -C "$HOME/tools/" > /dev/null \
   && rm $HOME/golang.temp.tar.gz
+
 
 # build maven cache
 RUN  echo '@GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/eaglesakura/maven/")' > /root/sync.groovy \

@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-const SWAGGER_CODEGEN_VERSION = "1.0.52"
+const SWAGGER_CODEGEN_VERSION = "1.1.build-55"
 
 func main() {
 	NewTempFileDirectory()

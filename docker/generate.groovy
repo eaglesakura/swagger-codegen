@@ -2,16 +2,8 @@
 // groovy ./script/swagger-codegen.groovy
 
 @GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/eaglesakura/maven/")
-@Grab("com.eaglesakura:lightweight-swagger-codegen:1.0.52")
+@Grab("com.eaglesakura:lightweight-swagger-codegen:1.1.build-55")
 import java.lang.Object;
-
-class AndroidCustomClientCodegen extends com.eaglesakura.swagger.generator.AndroidCustomClientCodegen {
-    AndroidCustomClientCodegen() {
-        super()
-        projectFolder = ""
-        sourceFolder = ""
-    }
-}
 
 static main(String[] args) {
     // Generate swagger.json
