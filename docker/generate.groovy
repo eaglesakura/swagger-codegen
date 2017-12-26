@@ -15,43 +15,44 @@ class AndroidCustomClientCodegen extends com.eaglesakura.swagger.generator.Andro
 
 static main(String[] args) {
     // Generate swagger.json
-    com.eaglesakura.swagger.generator.Generator.main([
-            "generate",
-            "-l", "io.swagger.codegen.languages.SwaggerGenerator",
-            "-o", "build/",
-            "-i", "swagger.yaml",
-    ] as String[])
-
     if(args[0] == "go-client") {
         // generate go client
         com.eaglesakura.swagger.generator.Generator.main([
                 "generate",
                 "-l", "com.eaglesakura.swagger.generator.GoClientCodegen",
-                "-o", "build/go-client",
+                "-o", "/output",
                 "-i", "swagger.yaml",
                 "-c", "config.json",
         ] as String[])
 
-        println(["go", "fmt", "./build/..."].execute().text)
+        println(["go", "fmt", "/output/..."].execute().text)
     } else if(args[0] == "go-server") {
         // generate go server
         com.eaglesakura.swagger.generator.Generator.main([
                 "generate",
                 "-l", "com.eaglesakura.swagger.generator.GoServerCodegen",
-                "-o", "build/go-server",
+                "-o", "/output",
                 "-i", "swagger.yaml",
                 "-c", "config.json",
         ] as String[])
 
-        println(["go", "fmt", "./build/..."].execute().text)
+        println(["go", "fmt", "/output/..."].execute().text)
     } else if(args[0] == "android") {
         // Generate Android client binding
         com.eaglesakura.swagger.generator.Generator.main([
                 "generate",
                 "-l", "com.eaglesakura.swagger.generator.AndroidCodegen",
-                "-o", "build/android",
+                "-o", "/output",
                 "-i", "swagger.yaml",
                 "-c", "config.json",
+        ] as String[])
+    } else if(args[0] == "swagger-json") {
+        // generate swagger.json
+        com.eaglesakura.swagger.generator.Generator.main([
+                "generate",
+                "-l", "io.swagger.codegen.languages.SwaggerGenerator",
+                "-o", "/output",
+                "-i", "swagger.yaml",
         ] as String[])
     }
 }

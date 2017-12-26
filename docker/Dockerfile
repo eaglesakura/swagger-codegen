@@ -2,25 +2,21 @@ FROM ubuntu:16.04
 MAINTAINER @eaglesakura
 
 ENV SWAGGER_CODEGEN_VERSION=1.0.52
+ENV _JAVA_OPTIONS="-Dfile.encoding=UTF-8" \
+    JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
+    PATH="/root/tools/groovy-2.4.9/bin:/root/tools/go/bin:/root/tools/gopath/bin:$PATH" \
+    GOROOT="/root/tools/go" \
+    GOPATH="/root/tools/gopath" \
+    GOBIN="/root/tools/gopath/bin"
 
 RUN  dpkg --add-architecture i386 \
   && apt-get update \
   && apt-get install -y openjdk-8-jdk wget unzip \
-  && mkdir $HOME/tools
-
-# install groovy
-ENV _JAVA_OPTIONS="-Dfile.encoding=UTF-8" \
-    JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
-RUN    cd $HOME/tools \
-    && wget https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.9.zip -O groovy.zip \
-    && unzip groovy.zip
-
-# setup golang
-ENV PATH="/root/tools/go/bin:/root/tools/gopath/bin:$PATH" \
-    GOROOT="/root/tools/go" \
-    GOPATH="/root/tools/gopath" \
-    GOBIN="/root/tools/gopath/bin"
-RUN  mkdir $HOME/tools/gopath \
+  && mkdir $HOME/tools \
+  && cd $HOME/tools \
+  && wget https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.9.zip -O groovy.zip \
+  && unzip groovy.zip \
+  && mkdir $HOME/tools/gopath \
   && mkdir $HOME/tools/gopath/bin \
   && wget https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz -O $HOME/golang.temp.tar.gz \
   && tar xovfz "$HOME/golang.temp.tar.gz" -C "$HOME/tools/" > /dev/null \
@@ -31,8 +27,7 @@ RUN  echo '@GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/ea
   && echo "@Grab(\"com.eaglesakura:lightweight-swagger-codegen:${SWAGGER_CODEGEN_VERSION}\")" >> /root/sync.groovy \
   && echo 'import java.lang.Object' >> /root/sync.groovy \
   && echo 'println "sync maven"' >> /root/sync.groovy \
-  && $HOME/tools/groovy-2.4.9/bin/groovy /root/sync.groovy \
+  && groovy /root/sync.groovy \
   && rm /root/sync.groovy
 
-ENV PATH=/root/tools/groovy-2.4.9/bin:$PATH
 ADD generate.groovy /usr/local/bin

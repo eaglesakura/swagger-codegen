@@ -60,7 +60,7 @@ func main() {
 				},
 				cli.StringFlag{
 					Name:  "target",
-					Usage: "go-client | go-server | android",
+					Usage: "go-client | go-server | android | swagger-json",
 				},
 			},
 		},

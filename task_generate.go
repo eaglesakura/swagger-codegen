@@ -32,9 +32,7 @@ func newSwaggerCodegenTask(ctx *cli.Context) (*SwaggerCodegenTask, error) {
 		task.SwaggerCodegenVersion = version
 	}
 
-	if config := ctx.String("config"); config == "" {
-		return nil, errors.New("-config not set")
-	} else {
+	if config := ctx.String("config"); config != "" {
 		task.ConfigFilePath = config
 	}
 
@@ -63,15 +61,17 @@ func newSwaggerCodegenTask(ctx *cli.Context) (*SwaggerCodegenTask, error) {
 func (it *SwaggerCodegenTask) Execute() {
 
 	// copy configs
-	if config, err := ioutil.ReadFile(it.ConfigFilePath); err != nil {
-		fmt.Errorf("%v load failed\n", it.ConfigFilePath)
-		return
-	} else {
-		ioutil.WriteFile(GetTempFilePath("config.json"), config, os.ModePerm)
+	if it.ConfigFilePath != "" {
+		if config, err := ioutil.ReadFile(it.ConfigFilePath); err != nil {
+			fmt.Errorf("%v load failed\n", it.ConfigFilePath)
+			return
+		} else {
+			ioutil.WriteFile(GetTempFilePath("config.json"), config, os.ModePerm)
+		}
 	}
 
 	if config, err := ioutil.ReadFile(it.SwaggerFilePath); err != nil {
-		fmt.Errorf("%v load failed\n", it.ConfigFilePath)
+		fmt.Errorf("%v load failed\n", it.SwaggerFilePath)
 		return
 	} else {
 		yamlValue := string(config)
@@ -86,13 +86,13 @@ func (it *SwaggerCodegenTask) Execute() {
 		Commands: []string{
 			"docker", "run", "--rm",
 			"-v", GetDockerMountPath() + "/.swagger/temp:/work",
+			"-v", GetDockerMountPath() + "/" + it.OutputDirectory + ":/output",
 			"-w", "/work",
 			"eaglesakura/swagger-codegen:" + it.SwaggerCodegenVersion,
 			"groovy", "/usr/local/bin/generate.groovy",
 			it.TargetLanguage,
 		},
 	}
-
 	// Docker 実行
 	shell.Stdout = func(stdout string) {
 		fmt.Println(stdout)
@@ -106,10 +106,4 @@ func (it *SwaggerCodegenTask) Execute() {
 		fmt.Errorf("%v", err)
 		return
 	}
-
-	// ディレクトリを移動させる
-	os.RemoveAll(it.OutputDirectory)
-	os.MkdirAll(it.OutputDirectory, os.ModePerm)
-	os.Rename(GetTempFilePath("build/"+it.TargetLanguage), it.OutputDirectory+"/"+it.TargetLanguage)
-	os.Rename(GetTempFilePath("build/swagger.json"), it.OutputDirectory+"/swagger.json")
 }
