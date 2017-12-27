@@ -60,10 +60,11 @@ func newSwaggerCodegenTask(ctx *cli.Context) (*SwaggerCodegenTask, error) {
 
 func (it *SwaggerCodegenTask) Execute() {
 
-	// cleanフラグを持っていたら、削除する
+	// cleanフラグを持っていたら、既存ディレクトリを削除する
 	if it.ctx.Bool("with-clean") {
 		fmt.Printf("Clean directory[%v]\n", it.OutputDirectory)
 		os.RemoveAll(it.OutputDirectory)
+		os.MkdirAll(it.OutputDirectory, os.ModePerm)
 	}
 
 	// copy configs
