@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-const SwaggerCodegenVersion = "1.1.0"
+const SwaggerCodegenVersion = "1.1.1"
 
 func main() {
 	NewTempFileDirectory()
