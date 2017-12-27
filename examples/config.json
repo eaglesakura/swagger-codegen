@@ -1,0 +1,5 @@
+{
+  "packageName": "golang_package_name",
+  "modelPackage": "java.gen.package_name",
+  "apiPackage": "java.gen.package_name"
+}
