@@ -46,17 +46,13 @@ func main() {
 				}
 			},
 			Flags: []cli.Flag{
-				cli.BoolFlag{
-					Name:  "with-clean",
-					Usage: "[pre generate] remove output directory",
+				cli.StringFlag{
+					Name:  "swagger",
+					Usage: "path/to/swagger.yaml",
 				},
 				cli.StringFlag{
 					Name:  "config",
 					Usage: "path/to/config.json",
-				},
-				cli.StringFlag{
-					Name:  "swagger",
-					Usage: "path/to/swagger.yaml",
 				},
 				cli.StringFlag{
 					Name:  "output",
@@ -65,6 +61,10 @@ func main() {
 				cli.StringFlag{
 					Name:  "target",
 					Usage: "go-client | go-server | android | swagger-json",
+				},
+				cli.BoolFlag{
+					Name:  "with-clean",
+					Usage: "[pre generate] remove output directory",
 				},
 			},
 		},
