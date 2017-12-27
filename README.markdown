@@ -8,6 +8,11 @@
 
 [本家SwaggerCodegen](https://github.com/swagger-api/swagger-codegen) に比べ、依存ライブラリの選択自由度が上がっています。
 
+使用するためには別途coreライブラリが必要です
+
+ * [swagger-go-core](https://github.com/eaglesakura/swagger-go-core)
+ * [swagger-java-core](https://github.com/eaglesakura/swagger-java-core)
+
 # Install
 
 ```
