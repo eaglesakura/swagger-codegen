@@ -18,6 +18,7 @@ func GetTempFilePath(path string) string {
  一時ファイル格納パスを生成する
 */
 func NewTempFileDirectory() {
+	DeleteTempFiles()
 	os.MkdirAll(".swagger/temp", os.ModePerm)
 	ioutil.WriteFile(".swagger/temp/.gitignore", []byte(`
 *.bin

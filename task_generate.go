@@ -60,6 +60,12 @@ func newSwaggerCodegenTask(ctx *cli.Context) (*SwaggerCodegenTask, error) {
 
 func (it *SwaggerCodegenTask) Execute() {
 
+	// cleanフラグを持っていたら、削除する
+	if it.ctx.Bool("with-clean") {
+		fmt.Printf("Clean directory[%v]\n", it.OutputDirectory)
+		os.RemoveAll(it.OutputDirectory)
+	}
+
 	// copy configs
 	if it.ConfigFilePath != "" {
 		if config, err := ioutil.ReadFile(it.ConfigFilePath); err != nil {
@@ -94,11 +100,13 @@ func (it *SwaggerCodegenTask) Execute() {
 		},
 	}
 	// Docker 実行
-	shell.Stdout = func(stdout string) {
-		fmt.Println(stdout)
+	shell.Stdout = func(lineText string) {
+		lineText = strings.Replace(lineText, "/output", it.OutputDirectory, -1)
+		fmt.Println(lineText)
 	}
-	shell.Stderr = func(stderr string) {
-		fmt.Println(stderr)
+	shell.Stderr = func(lineText string) {
+		lineText = strings.Replace(lineText, "/output", it.OutputDirectory, -1)
+		fmt.Println(lineText)
 	}
 
 	err := shell.Run()

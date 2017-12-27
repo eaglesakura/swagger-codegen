@@ -17,7 +17,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "lightweight-swagger-codegen"
 	app.Usage = "swagger code generator"
-	app.Version = "1.0.0 / lightweight-swagger-codegen " + SwaggerCodegenVersion // lightweight-swagger-codegenバージョンに合わせる
+	app.Version = "1.0.1 / lightweight-swagger-codegen " + SwaggerCodegenVersion // lightweight-swagger-codegenバージョンに合わせる
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
@@ -46,6 +46,10 @@ func main() {
 				}
 			},
 			Flags: []cli.Flag{
+				cli.BoolFlag{
+					Name:  "with-clean",
+					Usage: "[pre generate] remove output directory",
+				},
 				cli.StringFlag{
 					Name:  "config",
 					Usage: "path/to/config.json",
