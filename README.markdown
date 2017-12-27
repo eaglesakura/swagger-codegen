@@ -4,6 +4,15 @@
 
 出力するためには別途 [Docker](https://www.docker.com/) のインストールが必要になります。
 
+`swagger-codegen generate` コマンドにより、各種ソースコードを生成します。
+
+生成されたソースコードは、下記のライブラリに依存しますので組み込み時には `go get` や `build.gradle` への組み込みが必要になります。
+
+ * Golangライブラリ `--target go-client` `--target go-server`
+  * `go get -u -f github.com/eaglesakura/swagger-go-core`
+ * Androidライブラリ `--target android`
+  * `dependencies { api("com.eaglesakura:swagger-java-core:1.0.10") }`
+
 ## Install
 
 ```
@@ -27,16 +36,17 @@ docker run --name swagger-editor -d -p 8888:8080 swaggerapi/swagger-editor:v2.10
 docker container start swagger-editor
 ```
 
-## Support
+## Support Language
 
- * Golang(Client / Server)
- * Android(Client)
- * swagger.json(swagger.yaml to json)
+ * Golang
+  * クライアントサイド `--target go-client`
+  * サーバーサイド `--target go-server`
+ * Android(android)
+  * クライアントサイド `--target android`
+ * swagger.json
+  * swagger.yaml to swagger.json `--target swagger-json`
 
 ## example
-
-`swagger-codegen generate` コマンドにより、各種ソースコードを生成します。
-生成されたソースコードは、下記のライブラリに依存しますので組み込み時には `go get` や `build.gradle` への組み込みが必要になります。
 
 ```bash
 swagger-codegen \

@@ -23,6 +23,7 @@ RUN  dpkg --add-architecture i386 \
 
 
 # build maven cache
+ARG SWAGGER_CODEGEN_VERSION
 RUN  echo '@GrabResolver(name = "eaglesakura", root = "https://dl.bintray.com/eaglesakura/maven/")' > /root/sync.groovy \
   && echo "@Grab(\"com.eaglesakura:lightweight-swagger-codegen:${SWAGGER_CODEGEN_VERSION}\")" >> /root/sync.groovy \
   && echo 'import java.lang.Object' >> /root/sync.groovy \

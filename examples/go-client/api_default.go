@@ -91,22 +91,22 @@ type DefaultApiAccountSettingsPostRequest struct {
 */
 func (it *DefaultApi) AccountSettingsPost(_client swagger.FetchClient, _request *DefaultApiAccountSettingsPostRequest, result *Settings) error {
 	if !_client.NewValidator(_request.TrendLocationWoeid, _request.TrendLocationWoeid == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrendLocationWoeid' when calling AccountSettingsPost")
+		return errors.New(0, "Missing the required parameter 'TrendLocationWoeid' when calling AccountSettingsPost")
 	}
 	if !_client.NewValidator(_request.SleepTimeEnabled, _request.SleepTimeEnabled == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SleepTimeEnabled' when calling AccountSettingsPost")
+		return errors.New(0, "Missing the required parameter 'SleepTimeEnabled' when calling AccountSettingsPost")
 	}
 	if !_client.NewValidator(_request.StartSleepTime, _request.StartSleepTime == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'StartSleepTime' when calling AccountSettingsPost")
+		return errors.New(0, "Missing the required parameter 'StartSleepTime' when calling AccountSettingsPost")
 	}
 	if !_client.NewValidator(_request.EndSleepTime, _request.EndSleepTime == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'EndSleepTime' when calling AccountSettingsPost")
+		return errors.New(0, "Missing the required parameter 'EndSleepTime' when calling AccountSettingsPost")
 	}
 	if !_client.NewValidator(_request.TimeZone, _request.TimeZone == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TimeZone' when calling AccountSettingsPost")
+		return errors.New(0, "Missing the required parameter 'TimeZone' when calling AccountSettingsPost")
 	}
 	if !_client.NewValidator(_request.Lang, _request.Lang == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lang' when calling AccountSettingsPost")
+		return errors.New(0, "Missing the required parameter 'Lang' when calling AccountSettingsPost")
 	}
 
 	// create path and map variables
@@ -162,10 +162,10 @@ type DefaultApiAccountUpdateDeliveryDevicePostRequest struct {
 */
 func (it *DefaultApi) AccountUpdateDeliveryDevicePost(_client swagger.FetchClient, _request *DefaultApiAccountUpdateDeliveryDevicePostRequest, result *Settings) error {
 	if !_client.NewValidator(_request.Device, _request.Device == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Device' when calling AccountUpdateDeliveryDevicePost")
+		return errors.New(0, "Missing the required parameter 'Device' when calling AccountUpdateDeliveryDevicePost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateDeliveryDevicePost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateDeliveryDevicePost")
 	}
 
 	// create path and map variables
@@ -224,19 +224,19 @@ type DefaultApiAccountUpdateProfileBackgroundImagePostRequest struct {
 */
 func (it *DefaultApi) AccountUpdateProfileBackgroundImagePost(_client swagger.FetchClient, _request *DefaultApiAccountUpdateProfileBackgroundImagePostRequest, result *Settings) error {
 	if !_client.NewValidator(_request.File, _request.File == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'File' when calling AccountUpdateProfileBackgroundImagePost")
+		return errors.New(0, "Missing the required parameter 'File' when calling AccountUpdateProfileBackgroundImagePost")
 	}
 	if !_client.NewValidator(_request.Tile, _request.Tile == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Tile' when calling AccountUpdateProfileBackgroundImagePost")
+		return errors.New(0, "Missing the required parameter 'Tile' when calling AccountUpdateProfileBackgroundImagePost")
 	}
 	if !_client.NewValidator(_request.Use, _request.Use == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Use' when calling AccountUpdateProfileBackgroundImagePost")
+		return errors.New(0, "Missing the required parameter 'Use' when calling AccountUpdateProfileBackgroundImagePost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateProfileBackgroundImagePost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateProfileBackgroundImagePost")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfileBackgroundImagePost")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfileBackgroundImagePost")
 	}
 
 	// create path and map variables
@@ -311,25 +311,25 @@ type DefaultApiAccountUpdateProfileColorsPostRequest struct {
 */
 func (it *DefaultApi) AccountUpdateProfileColorsPost(_client swagger.FetchClient, _request *DefaultApiAccountUpdateProfileColorsPostRequest, result *Settings) error {
 	if !_client.NewValidator(_request.ProfileBackgroundColor, _request.ProfileBackgroundColor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ProfileBackgroundColor' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'ProfileBackgroundColor' when calling AccountUpdateProfileColorsPost")
 	}
 	if !_client.NewValidator(_request.ProfileLinkColor, _request.ProfileLinkColor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ProfileLinkColor' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'ProfileLinkColor' when calling AccountUpdateProfileColorsPost")
 	}
 	if !_client.NewValidator(_request.ProfileSidebarBorderColor, _request.ProfileSidebarBorderColor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ProfileSidebarBorderColor' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'ProfileSidebarBorderColor' when calling AccountUpdateProfileColorsPost")
 	}
 	if !_client.NewValidator(_request.ProfileSidebarFillColor, _request.ProfileSidebarFillColor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ProfileSidebarFillColor' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'ProfileSidebarFillColor' when calling AccountUpdateProfileColorsPost")
 	}
 	if !_client.NewValidator(_request.ProfileTextColor, _request.ProfileTextColor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ProfileTextColor' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'ProfileTextColor' when calling AccountUpdateProfileColorsPost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateProfileColorsPost")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfileColorsPost")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfileColorsPost")
 	}
 
 	// create path and map variables
@@ -388,10 +388,10 @@ type DefaultApiAccountUpdateProfileImagePostRequest struct {
 */
 func (it *DefaultApi) AccountUpdateProfileImagePost(_client swagger.FetchClient, _request *DefaultApiAccountUpdateProfileImagePostRequest, result *Settings) error {
 	if !_client.NewValidator(_request.Image, _request.Image == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Image' when calling AccountUpdateProfileImagePost")
+		return errors.New(0, "Missing the required parameter 'Image' when calling AccountUpdateProfileImagePost")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfileImagePost")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfileImagePost")
 	}
 
 	// create path and map variables
@@ -452,22 +452,22 @@ type DefaultApiAccountUpdateProfilePostRequest struct {
 */
 func (it *DefaultApi) AccountUpdateProfilePost(_client swagger.FetchClient, _request *DefaultApiAccountUpdateProfilePostRequest, result *Settings) error {
 	if !_client.NewValidator(_request.Name, _request.Name == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Name' when calling AccountUpdateProfilePost")
+		return errors.New(0, "Missing the required parameter 'Name' when calling AccountUpdateProfilePost")
 	}
 	if !_client.NewValidator(_request.Url, _request.Url == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Url' when calling AccountUpdateProfilePost")
+		return errors.New(0, "Missing the required parameter 'Url' when calling AccountUpdateProfilePost")
 	}
 	if !_client.NewValidator(_request.Location, _request.Location == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Location' when calling AccountUpdateProfilePost")
+		return errors.New(0, "Missing the required parameter 'Location' when calling AccountUpdateProfilePost")
 	}
 	if !_client.NewValidator(_request.Description, _request.Description == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Description' when calling AccountUpdateProfilePost")
+		return errors.New(0, "Missing the required parameter 'Description' when calling AccountUpdateProfilePost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateProfilePost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling AccountUpdateProfilePost")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfilePost")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling AccountUpdateProfilePost")
 	}
 
 	// create path and map variables
@@ -518,7 +518,7 @@ type DefaultApiApplicationRateLimitStatusGetRequest struct {
 */
 func (it *DefaultApi) ApplicationRateLimitStatusGet(_client swagger.FetchClient, _request *DefaultApiApplicationRateLimitStatusGetRequest, result interface{}) error {
 	if !_client.NewValidator(_request.Resources, _request.Resources == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Resources' when calling ApplicationRateLimitStatusGet")
+		return errors.New(0, "Missing the required parameter 'Resources' when calling ApplicationRateLimitStatusGet")
 	}
 
 	// create path and map variables
@@ -569,16 +569,16 @@ type DefaultApiBlocksCreatePostRequest struct {
 */
 func (it *DefaultApi) BlocksCreatePost(_client swagger.FetchClient, _request *DefaultApiBlocksCreatePostRequest, result *Users) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling BlocksCreatePost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling BlocksCreatePost")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling BlocksCreatePost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling BlocksCreatePost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling BlocksCreatePost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling BlocksCreatePost")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling BlocksCreatePost")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling BlocksCreatePost")
 	}
 
 	// create path and map variables
@@ -638,16 +638,16 @@ type DefaultApiBlocksDestroyPostRequest struct {
 */
 func (it *DefaultApi) BlocksDestroyPost(_client swagger.FetchClient, _request *DefaultApiBlocksDestroyPostRequest, result *Users) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling BlocksDestroyPost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling BlocksDestroyPost")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling BlocksDestroyPost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling BlocksDestroyPost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling BlocksDestroyPost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling BlocksDestroyPost")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling BlocksDestroyPost")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling BlocksDestroyPost")
 	}
 
 	// create path and map variables
@@ -697,10 +697,10 @@ type DefaultApiBlocksIdsGetRequest struct {
 */
 func (it *DefaultApi) BlocksIdsGet(_client swagger.FetchClient, _request *DefaultApiBlocksIdsGetRequest, result *CursorUsers) error {
 	if !_client.NewValidator(_request.StringifyIds, _request.StringifyIds == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'StringifyIds' when calling BlocksIdsGet")
+		return errors.New(0, "Missing the required parameter 'StringifyIds' when calling BlocksIdsGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling BlocksIdsGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling BlocksIdsGet")
 	}
 
 	// create path and map variables
@@ -749,13 +749,13 @@ type DefaultApiBlocksListGetRequest struct {
 */
 func (it *DefaultApi) BlocksListGet(_client swagger.FetchClient, _request *DefaultApiBlocksListGetRequest, result *CursorUsers) error {
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling BlocksListGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling BlocksListGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling BlocksListGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling BlocksListGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling BlocksListGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling BlocksListGet")
 	}
 
 	// create path and map variables
@@ -802,10 +802,10 @@ type DefaultApiDirectMessagesDestroyPostRequest struct {
 */
 func (it *DefaultApi) DirectMessagesDestroyPost(_client swagger.FetchClient, _request *DefaultApiDirectMessagesDestroyPostRequest, result *Messages) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling DirectMessagesDestroyPost")
+		return errors.New(0, "Missing the required parameter 'Id' when calling DirectMessagesDestroyPost")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling DirectMessagesDestroyPost")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling DirectMessagesDestroyPost")
 	}
 
 	// create path and map variables
@@ -859,16 +859,16 @@ type DefaultApiDirectMessagesGetRequest struct {
 */
 func (it *DefaultApi) DirectMessagesGet(_client swagger.FetchClient, _request *DefaultApiDirectMessagesGetRequest, result *MessagesArray) error {
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling DirectMessagesGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling DirectMessagesGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling DirectMessagesGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling DirectMessagesGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling DirectMessagesGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling DirectMessagesGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling DirectMessagesGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling DirectMessagesGet")
 	}
 
 	// create path and map variables
@@ -923,13 +923,13 @@ type DefaultApiDirectMessagesNewPostRequest struct {
 */
 func (it *DefaultApi) DirectMessagesNewPost(_client swagger.FetchClient, _request *DefaultApiDirectMessagesNewPostRequest, result *Messages) error {
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling DirectMessagesNewPost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling DirectMessagesNewPost")
 	}
 	if !_client.NewValidator(_request.Text, _request.Text == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Text' when calling DirectMessagesNewPost")
+		return errors.New(0, "Missing the required parameter 'Text' when calling DirectMessagesNewPost")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling DirectMessagesNewPost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling DirectMessagesNewPost")
 	}
 
 	// create path and map variables
@@ -991,19 +991,19 @@ type DefaultApiDirectMessagesSentGetRequest struct {
 */
 func (it *DefaultApi) DirectMessagesSentGet(_client swagger.FetchClient, _request *DefaultApiDirectMessagesSentGetRequest, result *MessagesArray) error {
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling DirectMessagesSentGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling DirectMessagesSentGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling DirectMessagesSentGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling DirectMessagesSentGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling DirectMessagesSentGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling DirectMessagesSentGet")
 	}
 	if !_client.NewValidator(_request.Page, _request.Page == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Page' when calling DirectMessagesSentGet")
+		return errors.New(0, "Missing the required parameter 'Page' when calling DirectMessagesSentGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling DirectMessagesSentGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling DirectMessagesSentGet")
 	}
 
 	// create path and map variables
@@ -1051,7 +1051,7 @@ type DefaultApiDirectMessagesShowGetRequest struct {
 */
 func (it *DefaultApi) DirectMessagesShowGet(_client swagger.FetchClient, _request *DefaultApiDirectMessagesShowGetRequest, result *MessagesArray) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling DirectMessagesShowGet")
+		return errors.New(0, "Missing the required parameter 'Id' when calling DirectMessagesShowGet")
 	}
 
 	// create path and map variables
@@ -1107,19 +1107,19 @@ type DefaultApiFollowersIdsGetRequest struct {
 */
 func (it *DefaultApi) FollowersIdsGet(_client swagger.FetchClient, _request *DefaultApiFollowersIdsGetRequest, result *CursorIds) error {
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling FollowersIdsGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling FollowersIdsGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling FollowersIdsGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling FollowersIdsGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling FollowersIdsGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling FollowersIdsGet")
 	}
 	if !_client.NewValidator(_request.StringifyIds, _request.StringifyIds == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'StringifyIds' when calling FollowersIdsGet")
+		return errors.New(0, "Missing the required parameter 'StringifyIds' when calling FollowersIdsGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling FollowersIdsGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling FollowersIdsGet")
 	}
 
 	// create path and map variables
@@ -1187,19 +1187,19 @@ type DefaultApiFriendsIdsGetRequest struct {
 */
 func (it *DefaultApi) FriendsIdsGet(_client swagger.FetchClient, _request *DefaultApiFriendsIdsGetRequest, result *CursorIds) error {
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling FriendsIdsGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling FriendsIdsGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendsIdsGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendsIdsGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling FriendsIdsGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling FriendsIdsGet")
 	}
 	if !_client.NewValidator(_request.StringifyIds, _request.StringifyIds == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'StringifyIds' when calling FriendsIdsGet")
+		return errors.New(0, "Missing the required parameter 'StringifyIds' when calling FriendsIdsGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling FriendsIdsGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling FriendsIdsGet")
 	}
 
 	// create path and map variables
@@ -1257,13 +1257,13 @@ type DefaultApiFriendshipsCreatePostRequest struct {
 */
 func (it *DefaultApi) FriendshipsCreatePost(_client swagger.FetchClient, _request *DefaultApiFriendshipsCreatePostRequest, result *Users) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendshipsCreatePost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendshipsCreatePost")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling FriendshipsCreatePost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling FriendshipsCreatePost")
 	}
 	if !_client.NewValidator(_request.Follow, _request.Follow == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Follow' when calling FriendshipsCreatePost")
+		return errors.New(0, "Missing the required parameter 'Follow' when calling FriendshipsCreatePost")
 	}
 
 	// create path and map variables
@@ -1310,10 +1310,10 @@ type DefaultApiFriendshipsDestroyPostRequest struct {
 */
 func (it *DefaultApi) FriendshipsDestroyPost(_client swagger.FetchClient, _request *DefaultApiFriendshipsDestroyPostRequest, result *Users) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendshipsDestroyPost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendshipsDestroyPost")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling FriendshipsDestroyPost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling FriendshipsDestroyPost")
 	}
 
 	// create path and map variables
@@ -1357,10 +1357,10 @@ type DefaultApiFriendshipsIncomingGetRequest struct {
 */
 func (it *DefaultApi) FriendshipsIncomingGet(_client swagger.FetchClient, _request *DefaultApiFriendshipsIncomingGetRequest, result *CursorIds) error {
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling FriendshipsIncomingGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling FriendshipsIncomingGet")
 	}
 	if !_client.NewValidator(_request.StringifyIds, _request.StringifyIds == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'StringifyIds' when calling FriendshipsIncomingGet")
+		return errors.New(0, "Missing the required parameter 'StringifyIds' when calling FriendshipsIncomingGet")
 	}
 
 	// create path and map variables
@@ -1404,10 +1404,10 @@ type DefaultApiFriendshipsOutgoingGetRequest struct {
 */
 func (it *DefaultApi) FriendshipsOutgoingGet(_client swagger.FetchClient, _request *DefaultApiFriendshipsOutgoingGetRequest, result *CursorIds) error {
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling FriendshipsOutgoingGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling FriendshipsOutgoingGet")
 	}
 	if !_client.NewValidator(_request.StringifyIds, _request.StringifyIds == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'StringifyIds' when calling FriendshipsOutgoingGet")
+		return errors.New(0, "Missing the required parameter 'StringifyIds' when calling FriendshipsOutgoingGet")
 	}
 
 	// create path and map variables
@@ -1461,16 +1461,16 @@ type DefaultApiFriendshipsShowGetRequest struct {
 */
 func (it *DefaultApi) FriendshipsShowGet(_client swagger.FetchClient, _request *DefaultApiFriendshipsShowGetRequest, result *Friendship) error {
 	if !_client.NewValidator(_request.TargetId, _request.TargetId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TargetId' when calling FriendshipsShowGet")
+		return errors.New(0, "Missing the required parameter 'TargetId' when calling FriendshipsShowGet")
 	}
 	if !_client.NewValidator(_request.TargetScreenName, _request.TargetScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TargetScreenName' when calling FriendshipsShowGet")
+		return errors.New(0, "Missing the required parameter 'TargetScreenName' when calling FriendshipsShowGet")
 	}
 	if !_client.NewValidator(_request.SourceId, _request.SourceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SourceId' when calling FriendshipsShowGet")
+		return errors.New(0, "Missing the required parameter 'SourceId' when calling FriendshipsShowGet")
 	}
 	if !_client.NewValidator(_request.SourceScreenName, _request.SourceScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SourceScreenName' when calling FriendshipsShowGet")
+		return errors.New(0, "Missing the required parameter 'SourceScreenName' when calling FriendshipsShowGet")
 	}
 
 	// create path and map variables
@@ -1530,16 +1530,16 @@ type DefaultApiFriendshipsUpdatePostRequest struct {
 */
 func (it *DefaultApi) FriendshipsUpdatePost(_client swagger.FetchClient, _request *DefaultApiFriendshipsUpdatePostRequest, result *Friendship) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendshipsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling FriendshipsUpdatePost")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling FriendshipsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling FriendshipsUpdatePost")
 	}
 	if !_client.NewValidator(_request.Device, _request.Device == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Device' when calling FriendshipsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Device' when calling FriendshipsUpdatePost")
 	}
 	if !_client.NewValidator(_request.Retweets, _request.Retweets == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Retweets' when calling FriendshipsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Retweets' when calling FriendshipsUpdatePost")
 	}
 
 	// create path and map variables
@@ -1584,7 +1584,7 @@ type DefaultApiGeoIdPlaceIdGetRequest struct {
 */
 func (it *DefaultApi) GeoIdPlaceIdGet(_client swagger.FetchClient, _request *DefaultApiGeoIdPlaceIdGetRequest, result *PlacesArray) error {
 	if !_client.NewValidator(_request.PlaceId, _request.PlaceId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'PlaceId' when calling GeoIdPlaceIdGet")
+		return errors.New(0, "Missing the required parameter 'PlaceId' when calling GeoIdPlaceIdGet")
 	}
 
 	// create path and map variables
@@ -1647,25 +1647,25 @@ type DefaultApiGeoPlacesGetRequest struct {
 */
 func (it *DefaultApi) GeoPlacesGet(_client swagger.FetchClient, _request *DefaultApiGeoPlacesGetRequest, result *Places) error {
 	if !_client.NewValidator(_request.Lat, _request.Lat == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lat' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Lat' when calling GeoPlacesGet")
 	}
 	if !_client.NewValidator(_request.Long, _request.Long == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Long' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Long' when calling GeoPlacesGet")
 	}
 	if !_client.NewValidator(_request.Name, _request.Name == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Name' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Name' when calling GeoPlacesGet")
 	}
 	if !_client.NewValidator(_request.Token, _request.Token == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Token' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Token' when calling GeoPlacesGet")
 	}
 	if !_client.NewValidator(_request.ContainedWithin, _request.ContainedWithin == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ContainedWithin' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'ContainedWithin' when calling GeoPlacesGet")
 	}
 	if !_client.NewValidator(_request.AttributestreetAddress, _request.AttributestreetAddress == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'AttributestreetAddress' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'AttributestreetAddress' when calling GeoPlacesGet")
 	}
 	if !_client.NewValidator(_request.Callback, _request.Callback == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Callback' when calling GeoPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Callback' when calling GeoPlacesGet")
 	}
 
 	// create path and map variables
@@ -1744,22 +1744,22 @@ type DefaultApiGeoReverseGeoncodeGetRequest struct {
 */
 func (it *DefaultApi) GeoReverseGeoncodeGet(_client swagger.FetchClient, _request *DefaultApiGeoReverseGeoncodeGetRequest, result *PlacesArray) error {
 	if !_client.NewValidator(_request.Lat, _request.Lat == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lat' when calling GeoReverseGeoncodeGet")
+		return errors.New(0, "Missing the required parameter 'Lat' when calling GeoReverseGeoncodeGet")
 	}
 	if !_client.NewValidator(_request.Long, _request.Long == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Long' when calling GeoReverseGeoncodeGet")
+		return errors.New(0, "Missing the required parameter 'Long' when calling GeoReverseGeoncodeGet")
 	}
 	if !_client.NewValidator(_request.Accuracy, _request.Accuracy == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Accuracy' when calling GeoReverseGeoncodeGet")
+		return errors.New(0, "Missing the required parameter 'Accuracy' when calling GeoReverseGeoncodeGet")
 	}
 	if !_client.NewValidator(_request.Granularity, _request.Granularity == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Granularity' when calling GeoReverseGeoncodeGet")
+		return errors.New(0, "Missing the required parameter 'Granularity' when calling GeoReverseGeoncodeGet")
 	}
 	if !_client.NewValidator(_request.MaxResults, _request.MaxResults == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxResults' when calling GeoReverseGeoncodeGet")
+		return errors.New(0, "Missing the required parameter 'MaxResults' when calling GeoReverseGeoncodeGet")
 	}
 	if !_client.NewValidator(_request.Callback, _request.Callback == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Callback' when calling GeoReverseGeoncodeGet")
+		return errors.New(0, "Missing the required parameter 'Callback' when calling GeoReverseGeoncodeGet")
 	}
 
 	// create path and map variables
@@ -1850,31 +1850,31 @@ type DefaultApiGeoSearchGetRequest struct {
 */
 func (it *DefaultApi) GeoSearchGet(_client swagger.FetchClient, _request *DefaultApiGeoSearchGetRequest, result *PlacesArray) error {
 	if !_client.NewValidator(_request.Lat, _request.Lat == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lat' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Lat' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.Long, _request.Long == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Long' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Long' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.Query, _request.Query == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Query' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Query' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.Ip, _request.Ip == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Ip' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Ip' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.Accuracy, _request.Accuracy == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Accuracy' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Accuracy' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.Granularity, _request.Granularity == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Granularity' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Granularity' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.ContainedWithin, _request.ContainedWithin == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ContainedWithin' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'ContainedWithin' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.AttributestreetAddress, _request.AttributestreetAddress == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'AttributestreetAddress' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'AttributestreetAddress' when calling GeoSearchGet")
 	}
 	if !_client.NewValidator(_request.Callback, _request.Callback == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Callback' when calling GeoSearchGet")
+		return errors.New(0, "Missing the required parameter 'Callback' when calling GeoSearchGet")
 	}
 
 	// create path and map variables
@@ -1959,22 +1959,22 @@ type DefaultApiGeoSimilarPlacesGetRequest struct {
 */
 func (it *DefaultApi) GeoSimilarPlacesGet(_client swagger.FetchClient, _request *DefaultApiGeoSimilarPlacesGetRequest, result *PlacesArray) error {
 	if !_client.NewValidator(_request.Lat, _request.Lat == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lat' when calling GeoSimilarPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Lat' when calling GeoSimilarPlacesGet")
 	}
 	if !_client.NewValidator(_request.Long, _request.Long == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Long' when calling GeoSimilarPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Long' when calling GeoSimilarPlacesGet")
 	}
 	if !_client.NewValidator(_request.Name, _request.Name == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Name' when calling GeoSimilarPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Name' when calling GeoSimilarPlacesGet")
 	}
 	if !_client.NewValidator(_request.ContainedWithin, _request.ContainedWithin == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ContainedWithin' when calling GeoSimilarPlacesGet")
+		return errors.New(0, "Missing the required parameter 'ContainedWithin' when calling GeoSimilarPlacesGet")
 	}
 	if !_client.NewValidator(_request.AttributestreetAddress, _request.AttributestreetAddress == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'AttributestreetAddress' when calling GeoSimilarPlacesGet")
+		return errors.New(0, "Missing the required parameter 'AttributestreetAddress' when calling GeoSimilarPlacesGet")
 	}
 	if !_client.NewValidator(_request.Callback, _request.Callback == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Callback' when calling GeoSimilarPlacesGet")
+		return errors.New(0, "Missing the required parameter 'Callback' when calling GeoSimilarPlacesGet")
 	}
 
 	// create path and map variables
@@ -2145,19 +2145,19 @@ type DefaultApiListMembersCreatePostRequest struct {
 */
 func (it *DefaultApi) ListMembersCreatePost(_client swagger.FetchClient, _request *DefaultApiListMembersCreatePostRequest, result interface{}) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersCreatePost")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersCreatePost")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersCreatePost")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersCreatePost")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListMembersCreatePost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListMembersCreatePost")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersCreatePost")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersCreatePost")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersCreatePost")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersCreatePost")
 	}
 
 	// create path and map variables
@@ -2230,22 +2230,22 @@ type DefaultApiListMembersDestroyAllGetRequest struct {
 */
 func (it *DefaultApi) ListMembersDestroyAllGet(_client swagger.FetchClient, _request *DefaultApiListMembersDestroyAllGetRequest, result *CursorLists) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersDestroyAllGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersDestroyAllGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersDestroyAllGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersDestroyAllGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListMembersDestroyAllGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListMembersDestroyAllGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListMembersDestroyAllGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListMembersDestroyAllGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersDestroyAllGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersDestroyAllGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersDestroyAllGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersDestroyAllGet")
 	}
 
 	// create path and map variables
@@ -2326,25 +2326,25 @@ type DefaultApiListMembersGetRequest struct {
 */
 func (it *DefaultApi) ListMembersGet(_client swagger.FetchClient, _request *DefaultApiListMembersGetRequest, result *Users) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListMembersGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListMembersGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling ListMembersGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling ListMembersGet")
 	}
 
 	// create path and map variables
@@ -2433,28 +2433,28 @@ type DefaultApiListMembersShowGetRequest struct {
 */
 func (it *DefaultApi) ListMembersShowGet(_client swagger.FetchClient, _request *DefaultApiListMembersShowGetRequest, result *Users) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListMembersShowGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListMembersShowGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListMembersShowGet")
 	}
 
 	// create path and map variables
@@ -2521,13 +2521,13 @@ type DefaultApiListsCreatePostRequest struct {
 */
 func (it *DefaultApi) ListsCreatePost(_client swagger.FetchClient, _request *DefaultApiListsCreatePostRequest, result *Lists) error {
 	if !_client.NewValidator(_request.Name, _request.Name == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Name' when calling ListsCreatePost")
+		return errors.New(0, "Missing the required parameter 'Name' when calling ListsCreatePost")
 	}
 	if !_client.NewValidator(_request.Mode, _request.Mode == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Mode' when calling ListsCreatePost")
+		return errors.New(0, "Missing the required parameter 'Mode' when calling ListsCreatePost")
 	}
 	if !_client.NewValidator(_request.Description, _request.Description == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Description' when calling ListsCreatePost")
+		return errors.New(0, "Missing the required parameter 'Description' when calling ListsCreatePost")
 	}
 
 	// create path and map variables
@@ -2584,16 +2584,16 @@ type DefaultApiListsDestroyPostRequest struct {
 */
 func (it *DefaultApi) ListsDestroyPost(_client swagger.FetchClient, _request *DefaultApiListsDestroyPostRequest, result *Lists) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsDestroyPost")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsDestroyPost")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsDestroyPost")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsDestroyPost")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsDestroyPost")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsDestroyPost")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsDestroyPost")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsDestroyPost")
 	}
 
 	// create path and map variables
@@ -2643,10 +2643,10 @@ type DefaultApiListsListGetRequest struct {
 */
 func (it *DefaultApi) ListsListGet(_client swagger.FetchClient, _request *DefaultApiListsListGetRequest, result *ListsArray) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsListGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsListGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListsListGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListsListGet")
 	}
 
 	// create path and map variables
@@ -2710,22 +2710,22 @@ type DefaultApiListsMembersCreateAllGetRequest struct {
 */
 func (it *DefaultApi) ListsMembersCreateAllGet(_client swagger.FetchClient, _request *DefaultApiListsMembersCreateAllGetRequest, result interface{}) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsMembersCreateAllGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsMembersCreateAllGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsMembersCreateAllGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsMembersCreateAllGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsMembersCreateAllGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsMembersCreateAllGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsMembersCreateAllGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsMembersCreateAllGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListsMembersCreateAllGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListsMembersCreateAllGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsMembersCreateAllGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsMembersCreateAllGet")
 	}
 
 	// create path and map variables
@@ -2801,22 +2801,22 @@ type DefaultApiListsMembersDestroyGetRequest struct {
 */
 func (it *DefaultApi) ListsMembersDestroyGet(_client swagger.FetchClient, _request *DefaultApiListsMembersDestroyGetRequest, result interface{}) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsMembersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsMembersDestroyGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsMembersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsMembersDestroyGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsMembersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsMembersDestroyGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListsMembersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListsMembersDestroyGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsMembersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsMembersDestroyGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsMembersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsMembersDestroyGet")
 	}
 
 	// create path and map variables
@@ -2882,16 +2882,16 @@ type DefaultApiListsMembershipsGetRequest struct {
 */
 func (it *DefaultApi) ListsMembershipsGet(_client swagger.FetchClient, _request *DefaultApiListsMembershipsGetRequest, result *CursorLists) error {
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListsMembershipsGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListsMembershipsGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsMembershipsGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsMembershipsGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling ListsMembershipsGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling ListsMembershipsGet")
 	}
 	if !_client.NewValidator(_request.FilterToOwnedLists, _request.FilterToOwnedLists == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'FilterToOwnedLists' when calling ListsMembershipsGet")
+		return errors.New(0, "Missing the required parameter 'FilterToOwnedLists' when calling ListsMembershipsGet")
 	}
 
 	// create path and map variables
@@ -2951,16 +2951,16 @@ type DefaultApiListsShowGetRequest struct {
 */
 func (it *DefaultApi) ListsShowGet(_client swagger.FetchClient, _request *DefaultApiListsShowGetRequest, result *Lists) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsShowGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsShowGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsShowGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsShowGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsShowGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsShowGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsShowGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsShowGet")
 	}
 
 	// create path and map variables
@@ -3045,31 +3045,31 @@ type DefaultApiListsStatusesGetRequest struct {
 */
 func (it *DefaultApi) ListsStatusesGet(_client swagger.FetchClient, _request *DefaultApiListsStatusesGetRequest, result *TweetsArray) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListsStatusesGet")
 	}
 	if !_client.NewValidator(_request.IncludeRts, _request.IncludeRts == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeRts' when calling ListsStatusesGet")
+		return errors.New(0, "Missing the required parameter 'IncludeRts' when calling ListsStatusesGet")
 	}
 
 	// create path and map variables
@@ -3144,16 +3144,16 @@ type DefaultApiListsSubscribersCreatePostRequest struct {
 */
 func (it *DefaultApi) ListsSubscribersCreatePost(_client swagger.FetchClient, _request *DefaultApiListsSubscribersCreatePostRequest, result *Lists) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersCreatePost")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersCreatePost")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersCreatePost")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersCreatePost")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersCreatePost")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersCreatePost")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersCreatePost")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersCreatePost")
 	}
 
 	// create path and map variables
@@ -3213,16 +3213,16 @@ type DefaultApiListsSubscribersDestroyGetRequest struct {
 */
 func (it *DefaultApi) ListsSubscribersDestroyGet(_client swagger.FetchClient, _request *DefaultApiListsSubscribersDestroyGetRequest, result interface{}) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersDestroyGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersDestroyGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersDestroyGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersDestroyGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersDestroyGet")
 	}
 
 	// create path and map variables
@@ -3297,25 +3297,25 @@ type DefaultApiListsSubscribersGetRequest struct {
 */
 func (it *DefaultApi) ListsSubscribersGet(_client swagger.FetchClient, _request *DefaultApiListsSubscribersGetRequest, result *CursorLists) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling ListsSubscribersGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListsSubscribersGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListsSubscribersGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListsSubscribersGet")
 	}
 
 	// create path and map variables
@@ -3404,28 +3404,28 @@ type DefaultApiListsSubscribersShowGetRequest struct {
 */
 func (it *DefaultApi) ListsSubscribersShowGet(_client swagger.FetchClient, _request *DefaultApiListsSubscribersShowGetRequest, result *Users) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling ListsSubscribersShowGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListsSubscribersShowGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling ListsSubscribersShowGet")
 	}
 
 	// create path and map variables
@@ -3497,16 +3497,16 @@ type DefaultApiListsSubscriptionsGetRequest struct {
 */
 func (it *DefaultApi) ListsSubscriptionsGet(_client swagger.FetchClient, _request *DefaultApiListsSubscriptionsGetRequest, result *CursorLists) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsSubscriptionsGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling ListsSubscriptionsGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling ListsSubscriptionsGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling ListsSubscriptionsGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling ListsSubscriptionsGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling ListsSubscriptionsGet")
 	}
 	if !_client.NewValidator(_request.Cursor, _request.Cursor == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Cursor' when calling ListsSubscriptionsGet")
+		return errors.New(0, "Missing the required parameter 'Cursor' when calling ListsSubscriptionsGet")
 	}
 
 	// create path and map variables
@@ -3581,25 +3581,25 @@ type DefaultApiListsUpdatePostRequest struct {
 */
 func (it *DefaultApi) ListsUpdatePost(_client swagger.FetchClient, _request *DefaultApiListsUpdatePostRequest, result interface{}) error {
 	if !_client.NewValidator(_request.ListId, _request.ListId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ListId' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'ListId' when calling ListsUpdatePost")
 	}
 	if !_client.NewValidator(_request.Slug, _request.Slug == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Slug' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Slug' when calling ListsUpdatePost")
 	}
 	if !_client.NewValidator(_request.OwnerScreenName, _request.OwnerScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'OwnerScreenName' when calling ListsUpdatePost")
 	}
 	if !_client.NewValidator(_request.OwnerId, _request.OwnerId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'OwnerId' when calling ListsUpdatePost")
 	}
 	if !_client.NewValidator(_request.Name, _request.Name == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Name' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Name' when calling ListsUpdatePost")
 	}
 	if !_client.NewValidator(_request.Mode, _request.Mode == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Mode' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Mode' when calling ListsUpdatePost")
 	}
 	if !_client.NewValidator(_request.Description, _request.Description == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Description' when calling ListsUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Description' when calling ListsUpdatePost")
 	}
 
 	// create path and map variables
@@ -3653,7 +3653,7 @@ type DefaultApiSavedSearchesCreatePostRequest struct {
 */
 func (it *DefaultApi) SavedSearchesCreatePost(_client swagger.FetchClient, _request *DefaultApiSavedSearchesCreatePostRequest, result *Query) error {
 	if !_client.NewValidator(_request.Query, _request.Query == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Query' when calling SavedSearchesCreatePost")
+		return errors.New(0, "Missing the required parameter 'Query' when calling SavedSearchesCreatePost")
 	}
 
 	// create path and map variables
@@ -3689,7 +3689,7 @@ type DefaultApiSavedSearchesDestroyIdPostRequest struct {
 */
 func (it *DefaultApi) SavedSearchesDestroyIdPost(_client swagger.FetchClient, _request *DefaultApiSavedSearchesDestroyIdPostRequest, result *Query) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling SavedSearchesDestroyIdPost")
+		return errors.New(0, "Missing the required parameter 'Id' when calling SavedSearchesDestroyIdPost")
 	}
 
 	// create path and map variables
@@ -3747,7 +3747,7 @@ type DefaultApiSavedSearchesShowIdGetRequest struct {
 */
 func (it *DefaultApi) SavedSearchesShowIdGet(_client swagger.FetchClient, _request *DefaultApiSavedSearchesShowIdGetRequest, result *Query) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling SavedSearchesShowIdGet")
+		return errors.New(0, "Missing the required parameter 'Id' when calling SavedSearchesShowIdGet")
 	}
 
 	// create path and map variables
@@ -3830,37 +3830,37 @@ type DefaultApiSearchTweetsGetRequest struct {
 */
 func (it *DefaultApi) SearchTweetsGet(_client swagger.FetchClient, _request *DefaultApiSearchTweetsGetRequest, result *TweetsArray) error {
 	if !_client.NewValidator(_request.Q, _request.Q == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Q' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Q' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.Geocode, _request.Geocode == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Geocode' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Geocode' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.Lang, _request.Lang == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lang' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Lang' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.Locale, _request.Locale == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Locale' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Locale' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.ResultType, _request.ResultType == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ResultType' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'ResultType' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.Until, _request.Until == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Until' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Until' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling SearchTweetsGet")
 	}
 	if !_client.NewValidator(_request.Callback, _request.Callback == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Callback' when calling SearchTweetsGet")
+		return errors.New(0, "Missing the required parameter 'Callback' when calling SearchTweetsGet")
 	}
 
 	// create path and map variables
@@ -3931,10 +3931,10 @@ type DefaultApiStatusesDestroyIdPostRequest struct {
 */
 func (it *DefaultApi) StatusesDestroyIdPost(_client swagger.FetchClient, _request *DefaultApiStatusesDestroyIdPostRequest, result *Tweets) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling StatusesDestroyIdPost")
+		return errors.New(0, "Missing the required parameter 'Id' when calling StatusesDestroyIdPost")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesDestroyIdPost")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesDestroyIdPost")
 	}
 
 	// create path and map variables
@@ -3991,19 +3991,19 @@ type DefaultApiStatusesHomeTimelineGetRequest struct {
 */
 func (it *DefaultApi) StatusesHomeTimelineGet(_client swagger.FetchClient, _request *DefaultApiStatusesHomeTimelineGetRequest, result *TweetsArray) error {
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling StatusesHomeTimelineGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling StatusesHomeTimelineGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling StatusesHomeTimelineGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling StatusesHomeTimelineGet")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesHomeTimelineGet")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesHomeTimelineGet")
 	}
 	if !_client.NewValidator(_request.ExcludeReplies, _request.ExcludeReplies == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ExcludeReplies' when calling StatusesHomeTimelineGet")
+		return errors.New(0, "Missing the required parameter 'ExcludeReplies' when calling StatusesHomeTimelineGet")
 	}
 	if !_client.NewValidator(_request.ContributorDetails, _request.ContributorDetails == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ContributorDetails' when calling StatusesHomeTimelineGet")
+		return errors.New(0, "Missing the required parameter 'ContributorDetails' when calling StatusesHomeTimelineGet")
 	}
 
 	// create path and map variables
@@ -4076,22 +4076,22 @@ type DefaultApiStatusesMentionsTimelineGetRequest struct {
 */
 func (it *DefaultApi) StatusesMentionsTimelineGet(_client swagger.FetchClient, _request *DefaultApiStatusesMentionsTimelineGetRequest, result *TweetsArray) error {
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling StatusesMentionsTimelineGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling StatusesMentionsTimelineGet")
 	}
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling StatusesMentionsTimelineGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling StatusesMentionsTimelineGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling StatusesMentionsTimelineGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling StatusesMentionsTimelineGet")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesMentionsTimelineGet")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesMentionsTimelineGet")
 	}
 	if !_client.NewValidator(_request.ContributorDetails, _request.ContributorDetails == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ContributorDetails' when calling StatusesMentionsTimelineGet")
+		return errors.New(0, "Missing the required parameter 'ContributorDetails' when calling StatusesMentionsTimelineGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling StatusesMentionsTimelineGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling StatusesMentionsTimelineGet")
 	}
 
 	// create path and map variables
@@ -4177,28 +4177,28 @@ type DefaultApiStatusesOembedGetRequest struct {
 */
 func (it *DefaultApi) StatusesOembedGet(_client swagger.FetchClient, _request *DefaultApiStatusesOembedGetRequest, result *Tweets) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'Id' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.Url, _request.Url == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Url' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'Url' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.Maxwidth, _request.Maxwidth == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Maxwidth' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'Maxwidth' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.HideMedia, _request.HideMedia == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'HideMedia' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'HideMedia' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.HideThread, _request.HideThread == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'HideThread' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'HideThread' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.Align, _request.Align == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Align' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'Align' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.Related, _request.Related == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Related' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'Related' when calling StatusesOembedGet")
 	}
 	if !_client.NewValidator(_request.Lang, _request.Lang == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lang' when calling StatusesOembedGet")
+		return errors.New(0, "Missing the required parameter 'Lang' when calling StatusesOembedGet")
 	}
 
 	// create path and map variables
@@ -4265,13 +4265,13 @@ type DefaultApiStatusesRetweetsIdGetRequest struct {
 */
 func (it *DefaultApi) StatusesRetweetsIdGet(_client swagger.FetchClient, _request *DefaultApiStatusesRetweetsIdGetRequest, result *TweetsArray) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling StatusesRetweetsIdGet")
+		return errors.New(0, "Missing the required parameter 'Id' when calling StatusesRetweetsIdGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling StatusesRetweetsIdGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling StatusesRetweetsIdGet")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesRetweetsIdGet")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesRetweetsIdGet")
 	}
 
 	// create path and map variables
@@ -4316,10 +4316,10 @@ type DefaultApiStatusesRetweetsIdPostRequest struct {
 */
 func (it *DefaultApi) StatusesRetweetsIdPost(_client swagger.FetchClient, _request *DefaultApiStatusesRetweetsIdPostRequest, result *Tweets) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling StatusesRetweetsIdPost")
+		return errors.New(0, "Missing the required parameter 'Id' when calling StatusesRetweetsIdPost")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesRetweetsIdPost")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesRetweetsIdPost")
 	}
 
 	// create path and map variables
@@ -4371,16 +4371,16 @@ type DefaultApiStatusesShowIdGetRequest struct {
 */
 func (it *DefaultApi) StatusesShowIdGet(_client swagger.FetchClient, _request *DefaultApiStatusesShowIdGetRequest, result *Tweets) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling StatusesShowIdGet")
+		return errors.New(0, "Missing the required parameter 'Id' when calling StatusesShowIdGet")
 	}
 	if !_client.NewValidator(_request.IncludeMyRetweet, _request.IncludeMyRetweet == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeMyRetweet' when calling StatusesShowIdGet")
+		return errors.New(0, "Missing the required parameter 'IncludeMyRetweet' when calling StatusesShowIdGet")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesShowIdGet")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesShowIdGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling StatusesShowIdGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling StatusesShowIdGet")
 	}
 
 	// create path and map variables
@@ -4453,25 +4453,25 @@ type DefaultApiStatusesUpdatePostRequest struct {
 */
 func (it *DefaultApi) StatusesUpdatePost(_client swagger.FetchClient, _request *DefaultApiStatusesUpdatePostRequest, result *Tweets) error {
 	if !_client.NewValidator(_request.Status, _request.Status == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Status' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Status' when calling StatusesUpdatePost")
 	}
 	if !_client.NewValidator(_request.InReplyToStatusId, _request.InReplyToStatusId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'InReplyToStatusId' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'InReplyToStatusId' when calling StatusesUpdatePost")
 	}
 	if !_client.NewValidator(_request.Lat, _request.Lat == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lat' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Lat' when calling StatusesUpdatePost")
 	}
 	if !_client.NewValidator(_request.Long, _request.Long == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Long' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'Long' when calling StatusesUpdatePost")
 	}
 	if !_client.NewValidator(_request.PlaceId, _request.PlaceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'PlaceId' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'PlaceId' when calling StatusesUpdatePost")
 	}
 	if !_client.NewValidator(_request.DisplayCoordinates, _request.DisplayCoordinates == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'DisplayCoordinates' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'DisplayCoordinates' when calling StatusesUpdatePost")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesUpdatePost")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesUpdatePost")
 	}
 
 	// create path and map variables
@@ -4555,25 +4555,25 @@ type DefaultApiStatusesUserTimelineGetRequest struct {
 */
 func (it *DefaultApi) StatusesUserTimelineGet(_client swagger.FetchClient, _request *DefaultApiStatusesUserTimelineGetRequest, result *TweetsArray) error {
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling StatusesUserTimelineGet")
 	}
 	if !_client.NewValidator(_request.SinceId, _request.SinceId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SinceId' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'SinceId' when calling StatusesUserTimelineGet")
 	}
 	if !_client.NewValidator(_request.MaxId, _request.MaxId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'MaxId' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'MaxId' when calling StatusesUserTimelineGet")
 	}
 	if !_client.NewValidator(_request.TrimUser, _request.TrimUser == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'TrimUser' when calling StatusesUserTimelineGet")
 	}
 	if !_client.NewValidator(_request.ExcludeReplies, _request.ExcludeReplies == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ExcludeReplies' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'ExcludeReplies' when calling StatusesUserTimelineGet")
 	}
 	if !_client.NewValidator(_request.ContributorDetails, _request.ContributorDetails == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ContributorDetails' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'ContributorDetails' when calling StatusesUserTimelineGet")
 	}
 	if !_client.NewValidator(_request.IncludeRts, _request.IncludeRts == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeRts' when calling StatusesUserTimelineGet")
+		return errors.New(0, "Missing the required parameter 'IncludeRts' when calling StatusesUserTimelineGet")
 	}
 
 	// create path and map variables
@@ -4657,10 +4657,10 @@ type DefaultApiTrendsClosestGetRequest struct {
 */
 func (it *DefaultApi) TrendsClosestGet(_client swagger.FetchClient, _request *DefaultApiTrendsClosestGetRequest, result *LocationArray) error {
 	if !_client.NewValidator(_request.Lat, _request.Lat == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Lat' when calling TrendsClosestGet")
+		return errors.New(0, "Missing the required parameter 'Lat' when calling TrendsClosestGet")
 	}
 	if !_client.NewValidator(_request.Long, _request.Long == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Long' when calling TrendsClosestGet")
+		return errors.New(0, "Missing the required parameter 'Long' when calling TrendsClosestGet")
 	}
 
 	// create path and map variables
@@ -4704,10 +4704,10 @@ type DefaultApiTrendsPlaceGetRequest struct {
 */
 func (it *DefaultApi) TrendsPlaceGet(_client swagger.FetchClient, _request *DefaultApiTrendsPlaceGetRequest, result *TrendInfo) error {
 	if !_client.NewValidator(_request.Id, _request.Id == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Id' when calling TrendsPlaceGet")
+		return errors.New(0, "Missing the required parameter 'Id' when calling TrendsPlaceGet")
 	}
 	if !_client.NewValidator(_request.Exclude, _request.Exclude == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Exclude' when calling TrendsPlaceGet")
+		return errors.New(0, "Missing the required parameter 'Exclude' when calling TrendsPlaceGet")
 	}
 
 	// create path and map variables
@@ -4761,16 +4761,16 @@ type DefaultApiUsersContributeesGetRequest struct {
 */
 func (it *DefaultApi) UsersContributeesGet(_client swagger.FetchClient, _request *DefaultApiUsersContributeesGetRequest, result *UsersArray) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersContributeesGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersContributeesGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling UsersContributeesGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling UsersContributeesGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersContributeesGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersContributeesGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling UsersContributeesGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling UsersContributeesGet")
 	}
 
 	// create path and map variables
@@ -4830,16 +4830,16 @@ type DefaultApiUsersContributorsGetRequest struct {
 */
 func (it *DefaultApi) UsersContributorsGet(_client swagger.FetchClient, _request *DefaultApiUsersContributorsGetRequest, result *UsersArray) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersContributorsGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersContributorsGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling UsersContributorsGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling UsersContributorsGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersContributorsGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersContributorsGet")
 	}
 	if !_client.NewValidator(_request.SkipStatus, _request.SkipStatus == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'SkipStatus' when calling UsersContributorsGet")
+		return errors.New(0, "Missing the required parameter 'SkipStatus' when calling UsersContributorsGet")
 	}
 
 	// create path and map variables
@@ -4894,13 +4894,13 @@ type DefaultApiUsersLookupGetRequest struct {
 */
 func (it *DefaultApi) UsersLookupGet(_client swagger.FetchClient, _request *DefaultApiUsersLookupGetRequest, result *UsersArray) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersLookupGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersLookupGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling UsersLookupGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling UsersLookupGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersLookupGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersLookupGet")
 	}
 
 	// create path and map variables
@@ -4947,10 +4947,10 @@ type DefaultApiUsersReportSpamPostRequest struct {
 */
 func (it *DefaultApi) UsersReportSpamPost(_client swagger.FetchClient, _request *DefaultApiUsersReportSpamPostRequest, result *Users) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersReportSpamPost")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersReportSpamPost")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling UsersReportSpamPost")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling UsersReportSpamPost")
 	}
 
 	// create path and map variables
@@ -5004,16 +5004,16 @@ type DefaultApiUsersSearchGetRequest struct {
 */
 func (it *DefaultApi) UsersSearchGet(_client swagger.FetchClient, _request *DefaultApiUsersSearchGetRequest, result *UsersArray) error {
 	if !_client.NewValidator(_request.Q, _request.Q == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Q' when calling UsersSearchGet")
+		return errors.New(0, "Missing the required parameter 'Q' when calling UsersSearchGet")
 	}
 	if !_client.NewValidator(_request.Page, _request.Page == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Page' when calling UsersSearchGet")
+		return errors.New(0, "Missing the required parameter 'Page' when calling UsersSearchGet")
 	}
 	if !_client.NewValidator(_request.Count, _request.Count == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'Count' when calling UsersSearchGet")
+		return errors.New(0, "Missing the required parameter 'Count' when calling UsersSearchGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersSearchGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersSearchGet")
 	}
 
 	// create path and map variables
@@ -5068,13 +5068,13 @@ type DefaultApiUsersShowGetRequest struct {
 */
 func (it *DefaultApi) UsersShowGet(_client swagger.FetchClient, _request *DefaultApiUsersShowGetRequest, result *Users) error {
 	if !_client.NewValidator(_request.ScreenName, _request.ScreenName == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersShowGet")
+		return errors.New(0, "Missing the required parameter 'ScreenName' when calling UsersShowGet")
 	}
 	if !_client.NewValidator(_request.UserId, _request.UserId == nil).Required(true).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'UserId' when calling UsersShowGet")
+		return errors.New(0, "Missing the required parameter 'UserId' when calling UsersShowGet")
 	}
 	if !_client.NewValidator(_request.IncludeEntities, _request.IncludeEntities == nil).Valid(_client) {
-		errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersShowGet")
+		return errors.New(0, "Missing the required parameter 'IncludeEntities' when calling UsersShowGet")
 	}
 
 	// create path and map variables
