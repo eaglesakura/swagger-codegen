@@ -11,11 +11,12 @@ import (
 )
 
 type SwaggerCodegenTask struct {
-	SwaggerFilePath       string // path/to/swagger.[yaml|yml]
-	ConfigFilePath        string // path/to/config.json
-	OutputDirectory       string // 出力先ディレクトリ
-	SwaggerCodegenVersion string // 出力対象バージョン
-	TargetLanguage        string // 対象言語
+	SwaggerFilePath       string            // path/to/swagger.[yaml|yml]
+	ConfigFilePath        string            // path/to/config.json
+	OutputDirectory       string            // 出力先ディレクトリ
+	SwaggerCodegenVersion string            // 出力対象バージョン
+	TargetLanguage        string            // 対象言語
+	ReplaceDefine         map[string]string // テキスト置換
 	ctx                   *cli.Context
 }
 
@@ -86,6 +87,20 @@ func (it *SwaggerCodegenTask) Execute() {
 			"__GENERATED_DATE__",
 			time.Now().Format("2006-01-02 15:04:05"),
 			-1)
+
+		// Key=Valueを入れ替える
+		for _, keyValue := range it.ctx.StringSlice("define") {
+			split := strings.Split(keyValue, "=")
+			if len(split) != 2 {
+				fmt.Errorf("--define format error [%v] require(key=value)", keyValue)
+				return
+			} else {
+				fmt.Printf("Replace %v=%v\n", split[0], split[1])
+			}
+
+			yamlValue = strings.Replace(yamlValue, split[0], split[1], -1)
+		}
+
 		ioutil.WriteFile(GetTempFilePath("swagger.yaml"), []byte(yamlValue), os.ModePerm)
 	}
 
