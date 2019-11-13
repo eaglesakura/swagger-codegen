@@ -27,3 +27,5 @@ deploy/deploy.yaml
 /.xpipeline
 /.swagger
 /test.sh
+go.sum
+
